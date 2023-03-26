@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lesson1_month6(2hw)</string>
+    <string name="something" />
+    <string name="to_second_activity">To Second Activity</string>
+    <string name="put_name">Put Name</string>
+    <string name="to_first_activity">To First Activity</string>
+</resources>
