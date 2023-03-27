@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Lesson1_month6(2hw)</string>
-    <string name="something" />
+    <string name="app_name">Lesson!_month6(2hw)</string>
+    <string name="something" >Something</string>
     <string name="to_second_activity">To Second Activity</string>
     <string name="put_name">Put Name</string>
     <string name="to_first_activity">To First Activity</string>
+    <string name="Empty_input">This input shouldn\'t be empty</string>
 </resources>

@@ -12,10 +12,14 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    object Key {
+        const val DATA_KEY = "key for data"
+    }
+
     private val getContent =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
-                binding.editTextFirst.setText(result.data?.getStringExtra(SecondActivity.Key.VALUE_KEY))
+                binding.editTextFirst.setText(result.data?.getStringExtra(Key.DATA_KEY))
             }
         }
 
@@ -31,11 +35,11 @@ class MainActivity : AppCompatActivity() {
             if (binding.editTextFirst.text.toString().isNotEmpty()){
                 getContent.launch(
                     Intent(this, SecondActivity::class.java).apply {
-                        putExtra(SecondActivity.Key.VALUE_KEY, binding.editTextFirst.text.toString())
+                        putExtra(Key.DATA_KEY, binding.editTextFirst.text.toString())
                     }
                 )
             } else{
-                Toast.makeText(this, "This input shouldn't be empty", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.Empty_input), Toast.LENGTH_LONG).show()
             }
         }
     }
