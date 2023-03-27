@@ -9,8 +9,6 @@ import com.example.lesson1_month62hw.databinding.ActivitySecondBinding
 class SecondActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySecondBinding
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
